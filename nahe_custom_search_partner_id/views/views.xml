@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+    <record id="nahe_view_module_search" model="ir.ui.view">
+            <field name="name">nahe_so_search</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.sale_order_view_search_inherit_sale"/>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="id_contacto"/>
+                    <filter name="ventas" string="Clientes que compraron" domain="[('sale_order_count_contacto','>',1)]" context="{'group_by' : 'sale_order_count_contacto'}"/>
+                </search>
+            </field>
+        </record>
+
+  </data>
+</odoo>
