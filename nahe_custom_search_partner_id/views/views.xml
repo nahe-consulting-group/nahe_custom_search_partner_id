@@ -7,7 +7,6 @@
             <field name="arch" type="xml">
                 <search>
                     <field name="id_contacto"/>
-                    <filter name="ventas" string="Clientes que compraron" domain="[('sale_order_count_contacto','>',1)]" context="{'group_by' : 'sale_order_count_contacto'}"/>
                 </search>
             </field>
         </record>
